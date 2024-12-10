@@ -23,7 +23,7 @@ const RecipeDetails: React.FC = () => {
   useEffect(() => {
     const fetchRecipe = async () => {
       try {
-        const response = await apiClient.get(`http://localhost:5000/api/recipes/${id}`);
+        const response = await apiClient.get(`/api/recipes/${id}`);
         setRecipe(response.data);
       } catch (err) {
         setError('Error fetching the recipe. Please try again.');

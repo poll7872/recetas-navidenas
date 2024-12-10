@@ -13,7 +13,7 @@ const RegisterUser: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      await apiClient.post('http://localhost:5000/api/users/register', formData);
+      await apiClient.post('/api/users/register', formData);
       alert('User registered successfully');
     } catch (error) {
       alert('Error registering user');

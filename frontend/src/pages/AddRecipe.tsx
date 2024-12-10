@@ -13,7 +13,7 @@ const AddRecipe: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      await apiClient.post('http://localhost:5000/api/recipes', formData);
+      await apiClient.post('/api/recipes', formData);
       alert('Recipe added successfully');
     } catch (error) {
       alert('Error adding recipe');
